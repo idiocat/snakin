@@ -4,6 +4,7 @@ class Snake
 {
     public Bodypart head { get; }
     public int length { get; set; }
+    public int apples_eaten = 0;
     public Snake(int x, int y)
     {
         Bodypart head = new(x, y, GLOBALLS.HEAD);
@@ -51,7 +52,7 @@ class Snake
             }
             else { current.X = new_x; current.Y = new_y; }
         }
-        if (isgrowing) {++length;}
+        if (isgrowing) {++length; ++apples_eaten; }
 
     }
     private (int, int) FindWhereToMove(char direction)
