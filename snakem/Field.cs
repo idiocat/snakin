@@ -53,7 +53,12 @@ class Field
         {
             for (int x = 0; x < this.x; ++x)
             {
+                if (field[x, y] == GLOBALLS.TILE) { Console.ForegroundColor = GLOBALLS.TILE_COLOUR; }
+                else if (field[x, y] == GLOBALLS.APPLE) { Console.ForegroundColor = GLOBALLS.APPLE_COLOUR; }
+                else { Console.ForegroundColor = GLOBALLS.SNAKE_COLOUR; }
                 Console.Write(field[x, y]);
+                Console.ResetColor();
+                Console.Write(' ');
                 ++index;
             }
             Console.Write('\n');

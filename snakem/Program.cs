@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Console.CursorVisible = false;
 
         int starting_x = GLOBALLS.SIZE_X / 2;
         int starting_y = GLOBALLS.SIZE_Y / 2;
