@@ -6,13 +6,13 @@ class Bodypart
     public int X
     {
         get { return x; }
-        set { x = value; if (x < 0) throw new AccessViolationException(); }
+        set { x = value; if (x < 0 || x >= GLOBALLS.SIZE_X) throw new AccessViolationException(); }
     }
     private int y;
     public int Y
     {
         get { return y; }
-        set { y = value; if (y < 0) throw new AccessViolationException(); }
+        set { y = value; if (y < 0 || y >= GLOBALLS.SIZE_Y) throw new AccessViolationException(); }
     }
     public char pic { get; }
     public Bodypart? next { get; set; }
